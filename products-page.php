@@ -31,3 +31,11 @@ function imran_woocommerce_call_to_order_text() {
 	echo '<h3>Call to order this product: <br><span style="color:red">017xxxxxxx,019xxxxxxx</span></h3><br>';
 }
 add_action('woocommerce_single_product_summary','imran_woocommerce_call_to_order_text', 30);
+
+
+// remove price from woocommerce
+
+add_filter( 'woocommerce_get_price_html', 'imran_remove_price');
+function imran_remove_price($price){     
+     return ;
+}
